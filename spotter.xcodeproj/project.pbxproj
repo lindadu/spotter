@@ -23,6 +23,7 @@
 		BCD6B76F18D3A652006BD2F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD6B74A18D3A651006BD2F5 /* Foundation.framework */; };
 		BCD6B77718D3A652006BD2F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCD6B77518D3A652006BD2F5 /* InfoPlist.strings */; };
 		BCD6B77A18D3A652006BD2F5 /* spotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B77918D3A652006BD2F5 /* spotterTests.m */; };
+		BCD6B78418D3A96C006BD2F5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD6B78318D3A96C006BD2F5 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		BCD6B77618D3A652006BD2F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BCD6B77818D3A652006BD2F5 /* spotterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = spotterTests.h; sourceTree = "<group>"; };
 		BCD6B77918D3A652006BD2F5 /* spotterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spotterTests.m; sourceTree = "<group>"; };
+		BCD6B78318D3A96C006BD2F5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				BCD6B74918D3A651006BD2F5 /* UIKit.framework in Frameworks */,
 				BCD6B74B18D3A651006BD2F5 /* Foundation.framework in Frameworks */,
 				BCD6B74D18D3A651006BD2F5 /* CoreGraphics.framework in Frameworks */,
+				BCD6B78418D3A96C006BD2F5 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +109,7 @@
 		BCD6B74718D3A651006BD2F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCD6B78318D3A96C006BD2F5 /* FacebookSDK.framework */,
 				BCD6B74818D3A651006BD2F5 /* UIKit.framework */,
 				BCD6B74A18D3A651006BD2F5 /* Foundation.framework */,
 				BCD6B74C18D3A651006BD2F5 /* CoreGraphics.framework */,
@@ -382,6 +386,10 @@
 		BCD6B77E18D3A652006BD2F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spotter/spotter-Prefix.pch";
 				INFOPLIST_FILE = "spotter/spotter-Info.plist";
@@ -393,6 +401,10 @@
 		BCD6B77F18D3A652006BD2F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spotter/spotter-Prefix.pch";
 				INFOPLIST_FILE = "spotter/spotter-Info.plist";
