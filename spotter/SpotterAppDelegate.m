@@ -7,18 +7,47 @@
 //
 
 #import "SpotterAppDelegate.h"
+#import "SpotterViewController.h"
+#import "FirstViewController.h"
+#import "TabViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @implementation SpotterAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Start creating your UITabBarController and set it up here:
+    TabViewController *tabBarController = [[TabViewController alloc] init];
+    // Finish creating your UITabBarController here
+    
+    SpotterViewController* vc2 = [[SpotterViewController alloc] init];
+    FirstViewController* vc1 = [[FirstViewController alloc] init];
+    
+    NSArray* controllers = [NSArray arrayWithObjects:vc1, vc2, nil];
+    tabBarController.viewControllers = controllers;
+
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
+    /*//Override point for customization after application launch.
     [FBLoginView class];
     [FBRequest class];
+    [FBProfilePictureView class];
+    
+    // Create a LoginUIViewController instance where the login button will be
+    SpotterViewController *spotterViewController = [[SpotterViewController alloc] init];
+    
+    // Set loginUIViewController as root view controller
+    [[self window] setRootViewController:spotterViewController];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];*/
+    
     
     return YES;
 }
+
+
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url

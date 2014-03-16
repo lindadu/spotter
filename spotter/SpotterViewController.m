@@ -10,34 +10,52 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface SpotterViewController ()
-
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 @end
 
 @implementation SpotterViewController
 
-- (void)viewDidLoad
+/*- (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    initWithNibName
+
+}*/
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info", @"email", @"user_likes"]];
     // Align the button in the center horizontally
     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), 5);
-    [self.view addSubview:loginView];
     
-    FBRequest *friendsRequest = [FBRequest requestForMyFriends];
-    [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
-                                                  NSDictionary* result,
-                                                  NSError *error) {
-        NSArray* friends = [result objectForKey:@"data"];
+    // Align the button in the center vertically
+    loginView.center = self.view.center;
+    
+    // Add the button to the view
+    [self.view addSubview:loginView];
         
-        UILabel *scoreLabel = [ [UILabel alloc ] init];
-        scoreLabel.text = [NSString stringWithFormat: @"Found: %i friends", friends.count];
-        
-        for (NSDictionary<FBGraphUser>* friend in friends) {
-            NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
-        }
-    }];
+    }
+    return self;
+}
+
+// This method will be called when the user information has been fetched
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user {
+    self.profilePictureView.profileID = user.id;
+    self.nameLabel.text = user.name;
+}
+
+// Implement the loginViewShowingLoggedInUser: delegate method to modify your app's UI for a logged-in user experience
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    self.statusLabel.text = @"You're logged in as";
+    NSLog(@"hello");
 }
 
 - (void)didReceiveMemoryWarning

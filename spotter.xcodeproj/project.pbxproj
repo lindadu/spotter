@@ -24,6 +24,8 @@
 		BCD6B77718D3A652006BD2F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCD6B77518D3A652006BD2F5 /* InfoPlist.strings */; };
 		BCD6B77A18D3A652006BD2F5 /* spotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B77918D3A652006BD2F5 /* spotterTests.m */; };
 		BCD6B78418D3A96C006BD2F5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD6B78318D3A96C006BD2F5 /* FacebookSDK.framework */; };
+		BCD6B79218D4FB89006BD2F5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B79118D4FB89006BD2F5 /* FirstViewController.m */; };
+		BCD6B79518D4FC4A006BD2F5 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B79418D4FC4A006BD2F5 /* TabViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		BCD6B77818D3A652006BD2F5 /* spotterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = spotterTests.h; sourceTree = "<group>"; };
 		BCD6B77918D3A652006BD2F5 /* spotterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spotterTests.m; sourceTree = "<group>"; };
 		BCD6B78318D3A96C006BD2F5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		BCD6B79018D4FB89006BD2F5 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		BCD6B79118D4FB89006BD2F5 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		BCD6B79318D4FC4A006BD2F5 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		BCD6B79418D4FC4A006BD2F5 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,10 @@
 			children = (
 				BCD6B75718D3A651006BD2F5 /* SpotterAppDelegate.h */,
 				BCD6B75818D3A651006BD2F5 /* SpotterAppDelegate.m */,
+				BCD6B79318D4FC4A006BD2F5 /* TabViewController.h */,
+				BCD6B79418D4FC4A006BD2F5 /* TabViewController.m */,
+				BCD6B79018D4FB89006BD2F5 /* FirstViewController.h */,
+				BCD6B79118D4FB89006BD2F5 /* FirstViewController.m */,
 				BCD6B76018D3A651006BD2F5 /* MainStoryboard.storyboard */,
 				BCD6B76318D3A651006BD2F5 /* SpotterViewController.h */,
 				BCD6B76418D3A651006BD2F5 /* SpotterViewController.m */,
@@ -278,6 +288,8 @@
 				BCD6B75518D3A651006BD2F5 /* main.m in Sources */,
 				BCD6B75918D3A651006BD2F5 /* SpotterAppDelegate.m in Sources */,
 				BCD6B76518D3A651006BD2F5 /* SpotterViewController.m in Sources */,
+				BCD6B79218D4FB89006BD2F5 /* FirstViewController.m in Sources */,
+				BCD6B79518D4FC4A006BD2F5 /* TabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +478,7 @@
 				BCD6B77F18D3A652006BD2F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCD6B78018D3A652006BD2F5 /* Build configuration list for PBXNativeTarget "spotterTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +487,7 @@
 				BCD6B78218D3A652006BD2F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7iW-tQ-SZ9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Spotter View Controller - Item-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="SpotterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="0rm-3E-6qf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1431" y="298"/>
+        </scene>
+        <!--First View Controller - Item 1-->
+        <scene sceneID="DlP-wf-62L">
+            <objects>
+                <viewController id="Tbc-GX-Kax" customClass="FirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRR-aV-wKF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1D8-jf-DxK">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tbc-GX-Kax" id="VNV-GZ-pkM"/>
+                                    <outlet property="delegate" destination="Tbc-GX-Kax" id="RgR-ug-nhP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1D8-jf-DxK" firstAttribute="top" secondItem="PRR-aV-wKF" secondAttribute="top" type="default" id="86m-ez-ITK"/>
+                            <constraint firstItem="1D8-jf-DxK" firstAttribute="trailing" secondItem="PRR-aV-wKF" secondAttribute="trailing" type="default" id="91o-W5-GoZ"/>
+                            <constraint firstItem="1D8-jf-DxK" firstAttribute="leading" secondItem="PRR-aV-wKF" secondAttribute="leading" type="default" id="bJy-OS-tMe"/>
+                            <constraint firstItem="1D8-jf-DxK" firstAttribute="bottom" secondItem="PRR-aV-wKF" secondAttribute="bottom" type="default" id="ifv-oB-zNB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="i2m-g9-XWg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxF-vP-hb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="-418"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lcH-QH-nvT">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="7iW-tQ-SZ9" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="IxV-95-4SG">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Tbc-GX-Kax" kind="relationship" relationship="viewControllers" id="MYe-Cp-ucV"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="xSu-W8-UIo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxy-5l-kPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="-188"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
