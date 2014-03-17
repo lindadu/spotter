@@ -30,7 +30,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1D8-jf-DxK">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Tbc-GX-Kax" id="VNV-GZ-pkM"/>
+                                    <outlet property="dataSource" destination="Tbc-GX-Kax" id="uhH-Kb-wUb"/>
                                     <outlet property="delegate" destination="Tbc-GX-Kax" id="RgR-ug-nhP"/>
                                 </connections>
                             </tableView>

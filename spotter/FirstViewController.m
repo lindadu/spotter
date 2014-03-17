@@ -8,6 +8,7 @@
 
 #import <FacebookSDK/FacebookSDK.h>
 #import "FirstViewController.h"
+#import "FriendsViewController.h"
 
 @interface FirstViewController ()
 
@@ -21,6 +22,7 @@ NSArray* friends;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        /*
         FBRequest *friendsRequest = [FBRequest requestForMyFriends];
         [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
                                                       NSDictionary* result,
@@ -47,7 +49,7 @@ NSArray* friends;
                 [self.view addSubview:label];
                 NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
             }
-        }];
+        }];*/
     }
     return self;
 }

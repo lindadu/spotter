@@ -8,8 +8,9 @@
 
 #import "SpotterAppDelegate.h"
 #import "SpotterViewController.h"
-#import "FirstViewController.h"
+#import "TableViewController.h"
 #import "TabViewController.h"
+#import "FriendsViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @implementation SpotterAppDelegate
@@ -21,7 +22,12 @@
     // Finish creating your UITabBarController here
     
     SpotterViewController* vc2 = [[SpotterViewController alloc] init];
-    FirstViewController* vc1 = [[FirstViewController alloc] init];
+    FBFriendPickerViewController* vc1 = [[FBFriendPickerViewController alloc] initWithNibName:nil bundle:nil];
+    vc1.delegate = self;
+    vc1.title = @"Friends";
+    vc1.allowsMultipleSelection = YES;
+    [vc1 clearSelection];
+    [vc1 loadData];
     
     NSArray* controllers = [NSArray arrayWithObjects:vc1, vc2, nil];
     tabBarController.viewControllers = controllers;

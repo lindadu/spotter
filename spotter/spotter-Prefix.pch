@@ -1,7 +1,6 @@
 //
 // Prefix header for all source files of the 'spotter' target in the 'spotter' project
 //
-
 #import <Availability.h>
 
 #ifndef __IPHONE_5_0

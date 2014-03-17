@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5CBEA618D61B0F00424E25 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5CBEA518D61B0F00424E25 /* FriendsViewController.m */; };
+		BC5CBEA918D62C3C00424E25 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5CBEA818D62C3C00424E25 /* TableViewController.m */; };
+		BC5CBEAC18D699A000424E25 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5CBEAB18D699A000424E25 /* DataStore.m */; };
 		BCD6B74918D3A651006BD2F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD6B74818D3A651006BD2F5 /* UIKit.framework */; };
 		BCD6B74B18D3A651006BD2F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD6B74A18D3A651006BD2F5 /* Foundation.framework */; };
 		BCD6B74D18D3A651006BD2F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD6B74C18D3A651006BD2F5 /* CoreGraphics.framework */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC5CBEA418D61B0F00424E25 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsViewController.h; path = ../FriendsViewController.h; sourceTree = "<group>"; };
+		BC5CBEA518D61B0F00424E25 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = ../FriendsViewController.m; sourceTree = "<group>"; };
+		BC5CBEA718D62C3C00424E25 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		BC5CBEA818D62C3C00424E25 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		BC5CBEAA18D699A000424E25 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
+		BC5CBEAB18D699A000424E25 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 		BCD6B74518D3A651006BD2F5 /* spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD6B74818D3A651006BD2F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCD6B74A18D3A651006BD2F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,10 +138,16 @@
 			children = (
 				BCD6B75718D3A651006BD2F5 /* SpotterAppDelegate.h */,
 				BCD6B75818D3A651006BD2F5 /* SpotterAppDelegate.m */,
+				BC5CBEA718D62C3C00424E25 /* TableViewController.h */,
+				BC5CBEA818D62C3C00424E25 /* TableViewController.m */,
 				BCD6B79318D4FC4A006BD2F5 /* TabViewController.h */,
 				BCD6B79418D4FC4A006BD2F5 /* TabViewController.m */,
+				BC5CBEA418D61B0F00424E25 /* FriendsViewController.h */,
+				BC5CBEA518D61B0F00424E25 /* FriendsViewController.m */,
 				BCD6B79018D4FB89006BD2F5 /* FirstViewController.h */,
 				BCD6B79118D4FB89006BD2F5 /* FirstViewController.m */,
+				BC5CBEAA18D699A000424E25 /* DataStore.h */,
+				BC5CBEAB18D699A000424E25 /* DataStore.m */,
 				BCD6B76018D3A651006BD2F5 /* MainStoryboard.storyboard */,
 				BCD6B76318D3A651006BD2F5 /* SpotterViewController.h */,
 				BCD6B76418D3A651006BD2F5 /* SpotterViewController.m */,
@@ -290,6 +305,9 @@
 				BCD6B76518D3A651006BD2F5 /* SpotterViewController.m in Sources */,
 				BCD6B79218D4FB89006BD2F5 /* FirstViewController.m in Sources */,
 				BCD6B79518D4FC4A006BD2F5 /* TabViewController.m in Sources */,
+				BC5CBEA618D61B0F00424E25 /* FriendsViewController.m in Sources */,
+				BC5CBEA918D62C3C00424E25 /* TableViewController.m in Sources */,
+				BC5CBEAC18D699A000424E25 /* DataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

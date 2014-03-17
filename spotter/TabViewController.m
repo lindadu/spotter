@@ -39,6 +39,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    if (!FBSession.activeSession.isOpen) {
+        // if the session is closed, then we open it here, and establish a handler for state changes
+        [FBSession.activeSession openWithCompletionHandler:^(FBSession *session,
+                                                             FBSessionState state,
+                                                             NSError *error) {
+            switch (state) {
+                case FBSessionStateClosedLoginFailed:
+                {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                        message:error.localizedDescription
+                                                                       delegate:nil
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles:nil];
+                    [alertView show];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning
